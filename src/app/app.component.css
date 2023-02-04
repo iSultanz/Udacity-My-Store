@@ -16,3 +16,8 @@
   .list li :hover {
     text-decoration: underline;
   }
+
+  .list li a {
+    text-decoration: none;
+    color: white;
+  }

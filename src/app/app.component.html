@@ -3,15 +3,15 @@
   <nav>
     <ul class='list'>
       <li>
-        <a>Product List</a>
+        <a routerLink='/products'>Product List</a>
       </li>
       <li>|</li>
       <li>
-        <a>Shopping Cart <i style="font-size:24px" class="fa">&#xf07a;</i></a>
+        <a routerLink='/cart'>Shopping Cart <i style="font-size:24px" class="fa">&#xf07a;</i></a>
       </li> 
     </ul>
   </nav>
 </div>
 <div class='container' style="margin-top: 25px;">
-  <ums-product-list></ums-product-list>
+  <router-outlet></router-outlet>
 </div>

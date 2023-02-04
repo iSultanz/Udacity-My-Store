@@ -6,6 +6,7 @@ import { ProductDetailsComponent } from './product/product-details/product-detai
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,6 +20,12 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     CommonModule,
     HttpClientModule,
+    RouterModule.forRoot([
+      { path: 'products', component: ProductListComponent },
+      { path: 'products/:id', component: ProductDetailsComponent },
+      { path: '', redirectTo: 'products', pathMatch: 'full' },
+      { path: '**', redirectTo: 'products', pathMatch: 'full' },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
