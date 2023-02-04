@@ -22,7 +22,6 @@ export class ProductListComponent implements OnInit, OnDestroy {
       },
       error: (err) => (this.err = err),
     });
-    console.log(this.products);
   }
   ngOnDestroy(): void {
     this.sub.unsubscribe();
