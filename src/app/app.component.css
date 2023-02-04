@@ -9,6 +9,10 @@
   }
   .list li {
     display: inline;
-    margin: 1%;
+    margin: 5px;
     color: white;
+  }
+
+  .list li :hover {
+    text-decoration: underline;
   }

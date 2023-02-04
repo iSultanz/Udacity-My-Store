@@ -1,0 +1,44 @@
+    [
+        {
+            "id": 1,
+            "name": "tea",
+            "description": "Red fresh tea",
+            "price": 15,
+            "image": "assets/tea.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Backpack",
+            "description": "Large Backpack to carry all your stuff!",
+            "price": 50,
+            "image": "assets/backpack.jpg"
+        },
+        {
+            "id": 3,
+            "name": "glasses",
+            "description": "Reading Glasses for all peoples",
+            "price": 35,
+            "image": "assets/glasses.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Headphones",
+            "description": "The newest Apple AirPod max",
+            "price": 35,
+            "image": "assets/headphones.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Book",
+            "description": "A useful Book!",
+            "price": 25,
+            "image": "assets/book.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Shirt",
+            "description": "White Shirts for males",
+            "price": 20,
+            "image": "assets/shirts.jpg"
+        }
+    ]
