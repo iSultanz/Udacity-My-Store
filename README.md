@@ -1,7 +1,13 @@
-# UdacityMystore
+# My Store Frontend Project
 
+## Getting Started
+My Store is a frontend project built with angular as project requirement for t angular project
+The Project Contain 3 routes
+- Product List
+- Product Details
+- Shopping Cart
+- Confirmation on submit
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
