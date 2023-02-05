@@ -14,7 +14,7 @@
               </span></h4>
             <p>Price: {{ cart.price | currency:'USD': 'symbol':'1.2-2'}}</p>
             <p>Quantity: {{ cart.quantity }}</p>
-            <input [(ngModel)]="cart.quantity" (click)='onUpdate()' class="number-input" type="number" min="1" />
+            <input [(ngModel)]="cart.quantity" (ngModelChange)='onUpdate()' class="number-input" type="number" min="1" />
           </div>
         </div>
         <h3>Total: ${{total}}</h3>
@@ -25,12 +25,12 @@
           <input class='form-input' [(ngModel)]="name" name="name" required minlength="3" type="text" id="name"
             placeholder="(minimum 3 characters)" />
           <span *ngIf="form.controls['name'].invalid && form.controls['name'].touched"
-            class="error-message text-danger">Name is required</span>
+            class="error-message text-danger">Name should be at least 3 characters</span>
           <label for="address">Address</label>
           <input class='form-input' type="text" id="address" name="address" required minlength="6" [(ngModel)]="address"
             placeholder="(minimum 6 characters)" />
           <span *ngIf="form.controls['address'].invalid && form.controls['address'].touched"
-            class="error-message text-danger">Address is required</span>
+            class="error-message text-danger">Address should be at least 6 characters</span>
           <label for="cardNumber">Card Number</label>
           <input class='form-input' type="text" id="cardNumber" name="cardNumber" required minlength='16' maxlength='16'
             pattern="^[0-9]*$" [(ngModel)]="cardNumber" placeholder="(16-digit-number)" />
