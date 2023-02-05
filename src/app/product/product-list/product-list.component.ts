@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Product } from '../../../types/product';
 import { ProductServices } from '../services/product.service';
+import { ProductCartService } from '../services/productCart.service';
 
 @Component({
   selector: 'ums-product-list',
@@ -11,10 +13,10 @@ export class ProductListComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   err: string = '';
   sub!: Subscription;
-  imageWidth: number = 512;
-  imageHeight: number = 512;
+  selectedQuantity: string = '';
 
-  constructor(private productService: ProductServices) { }
+  constructor(private productService: ProductServices,
+    private productCartService: ProductCartService) { }
   ngOnInit(): void {
     this.sub = this.productService.getProducts().subscribe({
       next: (products) => {
@@ -24,14 +26,9 @@ export class ProductListComponent implements OnInit, OnDestroy {
     });
   }
   ngOnDestroy(): void {
-    this.sub.unsubscribe();
+  }
+  alertOnSuccess() {
+    alert('Product added to cart');
   }
 }
 
-export interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-}

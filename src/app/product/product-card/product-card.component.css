@@ -1,0 +1,18 @@
+.card-header {
+    width: 100; 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+}
+
+.image-container {
+height: 350px;
+object-fit: fill;
+}
+
+.button-container {
+    width: fit-content;
+    margin: 15px auto;
+    margin-bottom: 0;
+    padding: 10px 15px
+}

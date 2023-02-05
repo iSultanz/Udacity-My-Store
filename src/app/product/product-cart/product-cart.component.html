@@ -1,0 +1,38 @@
+<h4 *ngIf="carts.length === 0" class="empty-cart-message">
+  Your cart is empty, Please Add some products to complete your order.
+</h4>
+<div class='cart-container'>
+  <div class='cart-panel container'>
+    <ng-container *ngIf='carts.length > 0'>
+      <div>
+        <div *ngFor="let cart of carts" class="cart-item">
+          <div class="cart-item-image">
+            <img [src]="cart.image" alt="cart image" />
+          </div>
+          <div class="cart-item-details">
+            <h4>{{ cart.name }}<span (click)="onRemoveItem(cart.id)"><img height="20"
+              src="../assets/trash.svg" /> </span></h4>
+            <p>Price: {{ cart.price | currency:'USD': 'symbol':'1.2-2'}}</p>
+            <p>Quantity: {{ cart.quantity }}</p>
+            <input [(ngModel)]="cart.quantity" (click)='onUpdate()' class ="number-input" type="number" min="1" />
+          </div>
+        </div>
+        <h3>Total: ${{total}}</h3>
+      </div>
+      <div>
+        <form #form="ngForm" class='form-container'>
+          <label for="name">Name</label>
+          <input class='form-input' type="text" id="name" name="name" [(ngModel)]="name" 
+          placeholder="(minimum 3 characters)"/>
+          <label for="address">Address</label>
+          <input class='form-input' type="text" id="address" name="address" [(ngModel)]="address" placeholder="(minimum 6 characters)" />
+          <label for="cardNumber">Card Number</label>
+          <input class='form-input' type="text" id="cardNumber" name="cardNumber" [(ngModel)]="cardNumber" placeholder="(16-digit-number)" />
+          <button class="btn btn-primary submit-btn" (click)="onCheckout()" >Submit</button>
+        </form>
+      </div>
+
+    </ng-container>
+  </div>
+
+</div>

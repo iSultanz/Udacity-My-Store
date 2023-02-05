@@ -1,44 +1,44 @@
     [
         {
             "id": 1,
-            "name": "tea",
-            "description": "Red fresh tea",
+            "name": "Cup",
+            "description": "Drink anything with it!",
             "price": 15,
-            "image": "assets/tea.jpg"
+            "image": "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"        
         },
         {
             "id": 2,
             "name": "Backpack",
             "description": "Large Backpack to carry all your stuff!",
             "price": 50,
-            "image": "assets/backpack.jpg"
+            "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"        
         },
         {
             "id": 3,
             "name": "glasses",
             "description": "Reading Glasses for all peoples",
             "price": 35,
-            "image": "assets/glasses.jpg"
+            "image": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"        
         },
         {
             "id": 4,
             "name": "Headphones",
-            "description": "The newest Apple AirPod max",
+            "description": "To listen to music",
             "price": 35,
-            "image": "assets/headphones.jpg"
+            "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"        
         },
         {
             "id": 5,
             "name": "Book",
             "description": "A useful Book!",
             "price": 25,
-            "image": "assets/book.jpg"
+            "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"        
         },
         {
             "id": 6,
             "name": "Shirt",
-            "description": "White Shirts for males",
-            "price": 20,
-            "image": "assets/shirts.jpg"
+            "description": "A nice shirt for all occasions",        
+            "price": 25,
+            "image": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
         }
     ]

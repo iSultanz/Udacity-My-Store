@@ -1,23 +1,31 @@
 <div class='product-details' *ngIf='product'>
-    <div>
-        <img class="img" style="margin: 0 auto;" [src]='product.image' [title]='product.name'>
+    <div style="padding-right: 35px;">
+        <img class=" card-img-top image-container" style="margin: 0 auto;" [src]='product.image' [title]='product.name'>
     </div>
     <div>
         <h1>{{product.name}}</h1>
         <p>Price: {{product.price | currency:'USD': 'symbol':'1.2-2'}}</p>
         <p>{{product.description}}</p>
-        <select class="form-select form-select-sm" style="width: 65px; margin: 0 auto;">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-        <button class="btn btn-primary button-container">Add to cart</button>
+        <div class="input-container">
+            <select #quantity (change)='onSelectedQuantity(quantity.value)'>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="input-container">
+            <button class="btn btn-primary" (click)='onSubmitProduct(product)'>Add to cart</button>
+        </div>
+        <div class="input-container">
+            <button type="button" class="btn btn-link" style="text-decoration: none;" (click)='backToProduct()'>&#x2190;
+                Back to Product List</button>
+        </div>
     </div>
 </div>

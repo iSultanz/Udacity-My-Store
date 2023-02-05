@@ -1,0 +1,31 @@
+<div style="width: 100; 
+display: grid; 
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: auto;">
+<div *ngFor='let product of products' class="card"
+style="width: 100; border-color: black; padding: 35px; margin: 10px;">
+<a [routerLink]="['/products',product.id]">
+    <img class=" card-img-top image-container" style="margin: 0 auto;" [src]='product.image' [title]='product.name'>
+</a>
+<div class="card-body">
+    <h5 class="card-title" style="text-align: center;">{{product.name}}</h5>
+    <p class="card-text" style="text-align: center;">{{product.price | currency:'USD': 'symbol':'1.2-2'}}</p>
+</div>
+<select #quantity 
+class="form-select form-select-sm" 
+style="width: 65px; margin: 0 auto;" 
+(change)='onSelectedQuantity(quantity.value)'>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+  <button class="btn btn-primary button-container"(click)='onSubmitProduct(product)'>Add to cart</button>
+</div>
+</div>
