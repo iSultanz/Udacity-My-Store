@@ -10,11 +10,11 @@
             <img [src]="cart.image" alt="cart image" />
           </div>
           <div class="cart-item-details">
-            <h4>{{ cart.name }}<span (click)="onRemoveItem(cart.id)"><img height="20"
-              src="../assets/trash.svg" /> </span></h4>
+            <h4>{{ cart.name }}<span (click)="onRemoveItem(cart.id)"><img height="20" src="../assets/trash.svg" />
+              </span></h4>
             <p>Price: {{ cart.price | currency:'USD': 'symbol':'1.2-2'}}</p>
             <p>Quantity: {{ cart.quantity }}</p>
-            <input [(ngModel)]="cart.quantity" (click)='onUpdate()' class ="number-input" type="number" min="1" />
+            <input [(ngModel)]="cart.quantity" (click)='onUpdate()' class="number-input" type="number" min="1" />
           </div>
         </div>
         <h3>Total: ${{total}}</h3>
@@ -22,13 +22,21 @@
       <div>
         <form #form="ngForm" class='form-container'>
           <label for="name">Name</label>
-          <input class='form-input' type="text" id="name" name="name" [(ngModel)]="name" 
-          placeholder="(minimum 3 characters)"/>
+          <input class='form-input' [(ngModel)]="name" name="name" required minlength="3" type="text" id="name"
+            placeholder="(minimum 3 characters)" />
+          <span *ngIf="form.controls['name'].invalid && form.controls['name'].touched"
+            class="error-message text-danger">Name is required</span>
           <label for="address">Address</label>
-          <input class='form-input' type="text" id="address" name="address" [(ngModel)]="address" placeholder="(minimum 6 characters)" />
+          <input class='form-input' type="text" id="address" name="address" required minlength="6" [(ngModel)]="address"
+            placeholder="(minimum 6 characters)" />
+          <span *ngIf="form.controls['address'].invalid && form.controls['address'].touched"
+            class="error-message text-danger">Address is required</span>
           <label for="cardNumber">Card Number</label>
-          <input class='form-input' type="text" id="cardNumber" name="cardNumber" [(ngModel)]="cardNumber" placeholder="(16-digit-number)" />
-          <button class="btn btn-primary submit-btn" (click)="onCheckout()" >Submit</button>
+          <input class='form-input' type="text" id="cardNumber" name="cardNumber" required minlength='16' maxlength='16'
+            pattern="^[0-9]*$" [(ngModel)]="cardNumber" placeholder="(16-digit-number)" />
+          <span *ngIf="form.controls['cardNumber'].invalid && form.controls['cardNumber'].touched"
+            class="error-message text-danger">Only numbers is allowed here</span>
+          <button [disabled]="!form.valid" class="btn btn-primary submit-btn" (click)="onCheckout()">Submit</button>
         </form>
       </div>
 

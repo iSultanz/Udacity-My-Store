@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Cart } from 'src/types/cart';
 import { ProductCartService } from '../services/productCart.service';
@@ -11,7 +12,6 @@ import { ProductCartService } from '../services/productCart.service';
 export class ProductCartComponent implements OnInit{
   carts: Cart[] = [];
   total!: number;
-  
   name: string = '';
   address: string = '';
   cardNumber: string = '';
